@@ -2,7 +2,7 @@
   "name": "new-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://andrisribens.github.io/sample-responsive-webpage",
+  "homepage": "https://sample-responsive-webpage.vercel.app/",
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
     "@emotion/react": "^11.9.3",
@@ -29,7 +29,6 @@
     "start:backend": "nodemon smallBackend.js",
     "start:frontend": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
