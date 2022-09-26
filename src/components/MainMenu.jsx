@@ -39,41 +39,6 @@ function ResponsiveAppBarWithDrawer(props) {
     setMobileOpen(!mobileOpen);
   };
 
-  const drawerLeft = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'left' }}>
-      <Typography variant="h4" sx={{ my: 2, pl: "20%" }}>
-        Mobile menu
-      </Typography>
-      <Divider />
-      <List>
-            <ListItem key="#home"
-            // disablePadding
-            >
-            <ListItemButton sx={{ textAlign: 'left', paddingLeft: "20%" }}
-            href="#home" >
-                <ListItemIcon sx={{ color: "#EF5B0C" }}>
-                  <HomeIcon></HomeIcon>
-                </ListItemIcon>
-              <ListItemText primary="Home"/>
-            </ListItemButton>
-          </ListItem>
-
-        {menuLinks.map((menuLink) => (
-          <ListItem key={menuLink.text} 
-          // disablePadding
-          >
-            <ListItemButton sx={{ textAlign: 'left', paddingLeft: "20%" }}>
-              <ListItemIcon sx={{ color: "#EF5B0C" }}>
-                    {menuLink.icon}
-                </ListItemIcon>
-              <ListItemText primary={menuLink.text}/>
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-    </Box>
-  );
 
   const [mobileBottomOpen, setMobileBottomOpen] = useState(false);
 
@@ -132,7 +97,7 @@ function ResponsiveAppBarWithDrawer(props) {
             variant="h6"
             noWrap
             component="a"
-            href="/sample-responsive-webpage"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -160,7 +125,7 @@ function ResponsiveAppBarWithDrawer(props) {
             variant="h5"
             noWrap
             component="a"
-            href="/sample-responsive-webpage"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -221,26 +186,6 @@ function ResponsiveAppBarWithDrawer(props) {
               </IconButton>
             </Fab>
     </AppBar>
-
-{/* This is for left drawer */}
-   <Box component="nav">
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', md: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', 
-            width: "80%" },
-          }}
-        >
-          {drawerLeft}
-        </Drawer>
-      </Box>
 
 {/* This is for bottom drawer */}
 

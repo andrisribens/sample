@@ -33,20 +33,19 @@ app.get("/chucknorris", (req,res) => {
 
 })
 
-// const data = {
-//     MERGE0: 'liga.josta@kaka.lt'
-// };
-
-// axios.post(process.env.REACT_APP_MAILCHIMP_SUBSCRIBE_URL, data)
-//     .then((res) => {
-//         console.log(`Status: ${res.status}`);
-//         console.log('Student Info: ', res.data);
-//     }).catch((err) => {
-//         console.error(err);
-//     });
-
-
-
+app.use((req, res, next) => {
+    const allowedOrigins = [
+        'www.youtube-nocookie.com', 
+        'www.vercel.com', 
+        'gmail.us2.list-manage.com', 
+        'matchilling-chuck-norris-jokes-v1.p.rapidapi.com'
+    ];
+    const origin = req.headers.origin;
+    if (allowedOrigins.includes(origin)) {
+      res.setHeader('Access-Control-Allow-Origin', origin);
+    }
+    return next();
+  });
 
 
 app.listen(PORT, () => console.log("Backend server is up and running on port " + PORT))
