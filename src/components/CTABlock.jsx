@@ -15,9 +15,9 @@ import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 
 
-function onChange(value) {
-  console.log('Captcha value:', value);
-}
+// function onChange(value) {
+//   console.log('Captcha value:', value);
+// }
 
 function CTABlock() {
 

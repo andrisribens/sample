@@ -15,8 +15,6 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 function EmailSubscription() {
 
-    const postUrl = process.env.REACT_APP_MAILCHIMP_SUBSCRIBE_URL
-
     const darkTheme = createTheme({
         palette: {
           mode: "dark",
@@ -178,7 +176,7 @@ function EmailSubscription() {
             <h5>Subscribe to our newsletter!</h5>
 
             <MailchimpSubscribe
-                url={postUrl}
+                url={process.env.REACT_APP_MAILCHIMP_SUBSCRIBE_URL}
                 render={({subscribe, status, message}) => (
                     <CustomForm 
                         status={status}
