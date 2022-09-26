@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import emailjs from "@emailjs/browser";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
@@ -149,14 +149,14 @@ function CTABlock() {
             ></TextField>
             </Grid>
 
-            <Grid item xs={12} p={1} >
+            {/* <Grid item xs={12} p={1} >
               <ReCAPTCHA
               sitekey={process.env.REACT_APP_RECAPTCHA_MYSITE_KEY}
               onChange={onChange}
               size="normal"
               theme="light"
               />
-            </Grid>
+            </Grid> */}
             </Grid>
             </ThemeProvider>
 

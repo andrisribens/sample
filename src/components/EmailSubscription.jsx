@@ -48,23 +48,25 @@ function EmailSubscription() {
         }
 
         useEffect(() => {
+
+            const sendingEvents = () => {
+                setBackdropOpen(true);
+            }  
+            const successEvents = () => {
+                setBackdropOpen(false);
+                setSuccessAlertOpen(!successAlertOpen);
+                setEmail("");
+            }
+            const errorEvents = () => {
+                setBackdropOpen(false);
+                setErrorAlertOpen(!errorAlertOpen);
+            }
+
             if(status === "sending") sendingEvents();
             if(status === "success") successEvents();
             if(status === "error") errorEvents();
           }, [status])
         
-        const sendingEvents = () => {
-            setBackdropOpen(true);
-        }  
-        const successEvents = () => {
-            setBackdropOpen(false);
-            setSuccessAlertOpen(!successAlertOpen);
-            setEmail("");
-        }
-        const errorEvents = () => {
-            setBackdropOpen(false);
-            setErrorAlertOpen(!errorAlertOpen);
-        }
         
         const handleSubmit = (event) => {
             event.preventDefault();
