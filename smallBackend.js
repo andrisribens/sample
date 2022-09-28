@@ -12,6 +12,8 @@ app.get("/", (req,res) => {
     res.json("hi")
 })
 
+
+
 app.get("/chucknorris", (req,res) => {
     const options = {
         method: 'GET',
@@ -29,23 +31,23 @@ app.get("/chucknorris", (req,res) => {
       }).catch(function (error) {
           console.error(error);
       });
-
-
 })
 
-app.use((req, res, next) => {
-    const allowedOrigins = [
-        'www.youtube-nocookie.com', 
-        'www.vercel.com', 
-        'gmail.us2.list-manage.com', 
-        'matchilling-chuck-norris-jokes-v1.p.rapidapi.com'
-    ];
-    const origin = req.headers.origin;
-    if (allowedOrigins.includes(origin)) {
-      res.setHeader('Access-Control-Allow-Origin', origin);
-    }
-    return next();
-  });
+
+
+// app.use((req, res, next) => {
+//     const allowedOrigins = [
+//         'www.youtube-nocookie.com', 
+//         'www.vercel.com', 
+//         'gmail.us2.list-manage.com', 
+//         'matchilling-chuck-norris-jokes-v1.p.rapidapi.com'
+//     ];
+//     const origin = req.headers.origin;
+//     if (allowedOrigins.includes(origin)) {
+//       res.setHeader('Access-Control-Allow-Origin', origin);
+//     }
+//     return next();
+//   });
 
 
 app.listen(PORT, () => console.log("Backend server is up and running on port " + PORT))

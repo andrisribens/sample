@@ -13,7 +13,12 @@ import Collapse from '@mui/material/Collapse';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
+// const express = require("express")
+// const cors = require("cors")
 
+// const app = express()
+
+// app.use(cors())
 
 // function onChange(value) {
 //   console.log('Captcha value:', value);
