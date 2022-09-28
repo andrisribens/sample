@@ -25,7 +25,7 @@ function App() {
           <NumberBlock />
           </div>
           <div className="video-block" id="video-block">
-          {/* <Video /> */}
+          <Video />
           </div>
           <div id="cta-block">
           {/* <CTABlock /> */}
