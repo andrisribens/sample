@@ -10,7 +10,7 @@ height="400"
 style={{border:0}} 
 allowfullscreen="" 
 loading="lazy" 
-referrerpolicy="no-referrer-when-downgrade"
+referrerpolicy="strict-origin-when-cross-origin"
 title="My home map">    
 </iframe>
 

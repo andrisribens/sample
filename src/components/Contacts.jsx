@@ -16,7 +16,7 @@ function Contacts() {
        <div className="contacts-block-content">
        <Grid container >
             <Grid item xs={12} mt={3} mb={3}>
-                <h3>Where to find me</h3>
+                <h3>Where to find us</h3>
             </Grid>
             <Grid item xs={12} sm={6}>
              <Map />
