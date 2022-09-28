@@ -42,8 +42,8 @@ function CTABlock() {
       const [errorAlertOpen, setErrorAlertOpen] = useState(false);
 
       const handleFormOpen = () => {
-        console.log("Form is open");
-        console.log(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+        console.warn("Form is open");
+        console.warn(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
         setFormIsOpen(!formIsOpen);
       }
 

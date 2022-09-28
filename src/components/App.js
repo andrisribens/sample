@@ -7,7 +7,7 @@ import Contacts from "./Contacts";
 import CardSlider from "./CardSlider";
 import CTABlock from "./CTABlock";
 import PhotoCTABlock from "./PhotoCTABlock";
-import EmailSubscription from "./EmailSubscription";
+// import EmailSubscription from "./EmailSubscription";
 
 function App() {
 
