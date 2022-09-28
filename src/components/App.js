@@ -31,7 +31,7 @@ function App() {
           {/* <CTABlock /> */}
           </div>
           <div id="contacts">
-          {/* <Contacts /> */}
+          <Contacts />
           </div>
           <div id="subscribe">
           {/* <EmailSubscription /> */}
