@@ -42,6 +42,8 @@ function CTABlock() {
       const [errorAlertOpen, setErrorAlertOpen] = useState(false);
 
       const handleFormOpen = () => {
+        console.log("Form is open");
+        console.log(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
         setFormIsOpen(!formIsOpen);
       }
 
@@ -65,11 +67,11 @@ function CTABlock() {
           process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
           .then((result) => {
             console.log(result.text);
-            console.log(process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+            console.log(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
             setSuccessAlertOpen(!successAlertOpen);
             
           }, (error) => {
-            console.log("Kaut kāda kļūda saistībā ar emailJS")
+            console.log("Kaut kāda kļūda saistībā ar emailJS");
             console.log(error.text);
             setErrorAlertOpen(!errorAlertOpen);
           });
