@@ -58,15 +58,16 @@ function CTABlock() {
         setErrorAlertOpen(false);
       }
 
-      const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-      const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-      const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
 // Send an email through emailjs service
 
       const handleOnSubmit = (e) => {
         e.preventDefault();
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+        emailjs.sendForm(
+          process.env.REACT_APP_EMAILJS_SERVICE_ID, 
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID, 
+          e.target, 
+          process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
           .then((result) => {
             console.log(result.text);
             setSuccessAlertOpen(!successAlertOpen);
