@@ -72,6 +72,7 @@ function CTABlock() {
             setSuccessAlertOpen(!successAlertOpen);
             
           }, (error) => {
+            console.log("Kaut kāda kļūda saistībā ar emailJS")
             console.log(error.text);
             setErrorAlertOpen(!errorAlertOpen);
           });

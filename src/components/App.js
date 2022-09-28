@@ -28,7 +28,7 @@ function App() {
           <Video />
           </div>
           <div id="cta-block">
-          {/* <CTABlock /> */}
+          <CTABlock />
           </div>
           <div id="contacts">
           <Contacts />
