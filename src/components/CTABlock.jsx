@@ -13,12 +13,7 @@ import Collapse from '@mui/material/Collapse';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
-// const express = require("express")
-// const cors = require("cors")
 
-// const app = express()
-
-// app.use(cors())
 
 // function onChange(value) {
 //   console.log('Captcha value:', value);
@@ -70,6 +65,7 @@ function CTABlock() {
           process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
           .then((result) => {
             console.log(result.text);
+            console.log(process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
             setSuccessAlertOpen(!successAlertOpen);
             
           }, (error) => {
