@@ -7,7 +7,7 @@ import Contacts from "./Contacts";
 import CardSlider from "./CardSlider";
 import CTABlock from "./CTABlock";
 import PhotoCTABlock from "./PhotoCTABlock";
-// import EmailSubscription from "./EmailSubscription";
+import EmailSubscription from "./EmailSubscription";
 
 function App() {
 
@@ -34,7 +34,7 @@ function App() {
           <Contacts />
           </div>
           <div id="subscribe">
-          {/* <EmailSubscription /> */}
+          <EmailSubscription />
           </div>
     </>
   );

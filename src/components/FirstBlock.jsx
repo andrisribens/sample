@@ -11,7 +11,12 @@ function FirstBlock() {
 
     const options = {
         method: 'GET',
-        url: 'http://localhost:8000/chucknorris'
+        url: process.env.REACT_APP_RAPID_API_URL,
+        headers: {
+            accept: 'application/json',
+            'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
+            'X-RapidAPI-Host': 'matchilling-chuck-norris-jokes-v1.p.rapidapi.com'
+          }
       };
       
       axios.request(options).then(function (response) {
