@@ -38,6 +38,7 @@ function CardSlider() {
               text={cardData.text}
               image={cardData.image}
               actionText={cardData.actionText}
+              cardHref={cardData.cardHref}
             />
         );
     }

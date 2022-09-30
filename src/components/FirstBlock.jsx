@@ -31,7 +31,7 @@ function FirstBlock() {
 
     return (
             <div className="first-block-content">
-                <h1>Random Chuck Norris quote</h1>
+                <h1>Random Chuck Norris quote from API</h1>
                 <h5>{chuckQuote}</h5>
             </div> 
     )

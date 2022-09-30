@@ -8,7 +8,7 @@ function OneCard(props) {
 
     return (
             <Card raised className="card" sx={{maxWidth: 600, minWidth: 300}} >
-            <CardActionArea>
+            <CardActionArea href={props.cardHref}>
               <CardMedia
                 component="img"
                 height="130"

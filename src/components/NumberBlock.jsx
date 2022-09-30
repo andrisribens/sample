@@ -6,7 +6,7 @@ function NumberBlock() {
             <div className="number-block-content">
                 <p className="large-number">123</p>
                 <p className="medium-number">*</p>
-                <p>* Some important figure about Your business You want to showcase.</p>
+                <p>* Some important figure about Our business We want to showcase.</p>
             </div>
     )
 }

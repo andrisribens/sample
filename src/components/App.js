@@ -8,6 +8,7 @@ import CardSlider from "./CardSlider";
 import CTABlock from "./CTABlock";
 import PhotoCTABlock from "./PhotoCTABlock";
 import EmailSubscription from "./EmailSubscription";
+import Footer from "./Footer";
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
           <div id="subscribe">
           <EmailSubscription />
           </div>
+          <Footer />
     </>
   );
 }

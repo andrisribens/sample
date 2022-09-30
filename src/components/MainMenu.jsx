@@ -33,7 +33,6 @@ const menuLinks = [
 function ResponsiveAppBarWithDrawer(props) {
   
   const { window } = props;
-
   const [mobileBottomOpen, setMobileBottomOpen] = useState(false);
 
   const handleBottomDrawerToggle = () => {
