@@ -1,10 +1,10 @@
 import React, { useState, useRef } from "react";
-import OneCard from "./OneCard";
-import cardData from "../data/cardData";
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import Box from "@mui/material/Box";
 
+import OneCard from "./OneCard";
+import cardData from "../data/cardData";
 
 function CardSlider() {
 

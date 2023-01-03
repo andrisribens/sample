@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from "react";
+import MailchimpSubscribe from "react-mailchimp-subscribe"
 import TextField from '@mui/material/TextField';
 import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Grid from "@mui/material/Grid";
 import InputAdornment from '@mui/material/InputAdornment';
 import EmailIcon from '@mui/icons-material/Email';
-import MailchimpSubscribe from "react-mailchimp-subscribe"
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
