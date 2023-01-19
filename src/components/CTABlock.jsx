@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -37,6 +38,8 @@ function CTABlock() {
   const [formIsOpen, setFormIsOpen] = useState(false);
   const [successAlertOpen, setSuccessAlertOpen] = useState(false);
   const [errorAlertOpen, setErrorAlertOpen] = useState(false);
+
+  const { ref: btnRef, inView: btnIsVisible } = useInView();
 
   const handleFormOpen = () => {
     setFormIsOpen(!formIsOpen);
@@ -184,6 +187,8 @@ function CTABlock() {
                 color="bright"
                 size="large"
                 onClick={handleFormOpen}
+                className={btnIsVisible ? 'animate-cta-block-btn' : ''}
+                ref={btnRef}
               >
                 Send us a message
               </Button>

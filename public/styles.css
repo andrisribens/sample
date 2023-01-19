@@ -38,17 +38,24 @@ p {
   font-size: 1rem;
 }
 
-.menu-bar {
-  background-color: #143F6B;
-}
-
 .first-block {
   padding: 50px 0;
   text-align: center;
 }
 
-.first-block h1 {
+.main-title {
   color:#003865;
+  animation: grow-title 1s;
+}
+
+@keyframes grow-title {
+  0% {
+    transform: scale(0.8);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  
 }
 
 .first-block h5 {
@@ -77,13 +84,39 @@ p {
 .photo-cta-block-content h4 {
   color: #4C4C4C;
   display: inline;
-  background-color: white;
+  /* background-color: white; */
   font-weight: 600;
 }
 
 .photo-cta-block-content button {
   margin-top: 50px; 
   display: block;
+}
+
+span.btn-first-cta-text {
+  text-decoration: none;
+}
+
+.btn-first-cta {
+  padding: 10px 25px;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  border: solid 2px #fff;
+  border-radius: 4px;
+  background-color: rgb(10, 10, 10, 20%);
+  cursor: pointer;
+}
+
+.photo-txt {
+  background-color: white;
+}
+
+.btn-first-cta:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .slider-block {
@@ -142,6 +175,20 @@ p {
   font-family: "Roboto", sans-serif;
   color: gray;
   text-align: left;
+}
+
+.animate-card {
+  animation: show-card 1s;
+}
+
+@keyframes show-card {
+  0% {
+    opacity: 0;
+    scale: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .left-button-box {
@@ -270,6 +317,24 @@ p {
   border: 2px solid white;
 } 
 
+.animate-cta-block-btn {
+  animation: shake 0.2s 0.5s;
+  animation-iteration-count: 5;
+}
+
+@keyframes shake {
+ 33% {
+  transform: rotate(-3deg);
+ }
+ 
+ 66% {
+  transform: rotate(-3deg);
+ }
+ 100% {
+  transform: rotate(0);
+ }
+}
+
 .contacts-block {
   text-align: center;
 
@@ -319,7 +384,16 @@ p {
   font-weight: 600;
   display: inline-block;
   vertical-align: text-top;
+}
 
+.animate-star {
+  animation: glow 2s linear infinite;
+}
+
+@keyframes glow {
+  50% {
+    color: #EF5B0C;
+}
 }
 
 .email-subscription-block {

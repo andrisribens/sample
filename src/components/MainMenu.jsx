@@ -21,17 +21,31 @@ import HomeIcon from '@mui/icons-material/Home';
 import CancelIcon from '@mui/icons-material/Cancel';
 import EmailIcon from '@mui/icons-material/Email';
 
-
 const menuLinks = [
-  {text:'Slider', icon: <ViewCarouselIcon></ViewCarouselIcon>, link: "#slider"},
-  {text:'Video', icon: <OndemandVideoIcon></OndemandVideoIcon>, link: "#video-block"}, 
-  {text: "CTA block", icon: <CheckBoxIcon></CheckBoxIcon>, link: "#cta-block"}, 
-  {text: "Contacts", icon: <PhoneAndroidIcon></PhoneAndroidIcon>, link: "#contacts"},
-  {text: "Subscribe", icon: <EmailIcon></EmailIcon>, link: "#subscribe"}
+  {
+    text: 'Slider',
+    icon: <ViewCarouselIcon></ViewCarouselIcon>,
+    link: '#slider',
+  },
+  {
+    text: 'Video',
+    icon: <OndemandVideoIcon></OndemandVideoIcon>,
+    link: '#video-block',
+  },
+  {
+    text: 'CTA block',
+    icon: <CheckBoxIcon></CheckBoxIcon>,
+    link: '#cta-block',
+  },
+  {
+    text: 'Contacts',
+    icon: <PhoneAndroidIcon></PhoneAndroidIcon>,
+    link: '#contacts',
+  },
+  { text: 'Subscribe', icon: <EmailIcon></EmailIcon>, link: '#subscribe' },
 ];
 
 function ResponsiveAppBarWithDrawer(props) {
-  
   const { window } = props;
   const [mobileBottomOpen, setMobileBottomOpen] = useState(false);
 
@@ -41,32 +55,34 @@ function ResponsiveAppBarWithDrawer(props) {
 
   const drawerBottom = (
     <Box onClick={handleBottomDrawerToggle} sx={{ textAlign: 'left' }}>
-         
       <List>
-          <ListItem key="#home">
-              <ListItemButton sx={{ textAlign: 'left', paddingLeft: "20%" }}
-              href="#home" >
-                <ListItemIcon sx={{ color: "#EF5B0C" }}>
-                    <HomeIcon></HomeIcon>
-                </ListItemIcon>
-              <ListItemText primary="Home"/>
-            </ListItemButton>
-          </ListItem>
+        <ListItem key="#home">
+          <ListItemButton
+            sx={{ textAlign: 'left', paddingLeft: '20%' }}
+            href="#home"
+          >
+            <ListItemIcon sx={{ color: '#EF5B0C' }}>
+              <HomeIcon></HomeIcon>
+            </ListItemIcon>
+            <ListItemText primary="Home" />
+          </ListItemButton>
+        </ListItem>
 
-          <Divider />
+        <Divider />
 
         {menuLinks.map((menuLink) => (
-          <ListItem key={menuLink.text} 
-          // disablePadding
+          <ListItem
+            key={menuLink.text}
+            // disablePadding
           >
-            <ListItemButton 
-            sx={{ textAlign: 'left', paddingLeft: "20%" }}
-            href={menuLink.link}
+            <ListItemButton
+              sx={{ textAlign: 'left', paddingLeft: '20%' }}
+              href={menuLink.link}
             >
-              <ListItemIcon size="large" sx={{ color: "#EF5B0C" }}>
-                    {menuLink.icon}
-                </ListItemIcon>
-              <ListItemText primary={menuLink.text}/>
+              <ListItemIcon size="large" sx={{ color: '#EF5B0C' }}>
+                {menuLink.icon}
+              </ListItemIcon>
+              <ListItemText primary={menuLink.text} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -75,37 +91,35 @@ function ResponsiveAppBarWithDrawer(props) {
     </Box>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
-
-
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
-    
     <>
-      <AppBar>
-      <Container maxWidth="xl" className="menu-bar">
-      {/* //This is Desktop menu */}
-        <Toolbar disableGutters >
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Desktop LOGO
-          </Typography>
-          
-          {/* This is mobile top menu */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            {/* <IconButton
+      <AppBar sx={{ backgroundColor: '#143F6B' }}>
+        <Container maxWidth="xl">
+          {/* //This is Desktop menu */}
+          <Toolbar disableGutters>
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                mr: 2,
+                display: { xs: 'none', md: 'flex' },
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+              Desktop LOGO
+            </Typography>
+
+            {/* This is mobile top menu */}
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+              {/* <IconButton
               size="large"
               aria-label="hamburger menu"
               onClick={handleDrawerToggle}
@@ -113,78 +127,84 @@ function ResponsiveAppBarWithDrawer(props) {
             >
               <MenuIcon />
             </IconButton> */}
-          </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Mobile LOGO
-          </Typography>
-
-    
-          {/* This part is for desktop menu */}
-          <Box sx={{ justifyContent: "flex-end", flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {menuLinks.map((menuLink) => (
-              <Button
-                key={menuLink.text}
-                sx={{mr: 3, my: 2, color: 'white', display: 'block' }}
-                href={menuLink.link}
-              >
-                {menuLink.text}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
-   <Toolbar />
-
-
-   {/* This part is for floating action button */}
-        <AppBar sx={{
-              position: "fixed",
-              display: { xs: 'flex', md: 'none' },
-              top: "auto",
-              bottom: 0,
-        }}>
-
-            <Fab 
-              size="large" 
-              sx={{ 
-                bgcolor: "#143F6B",
-                color: "#ffffff",
-                flexGrow: 1, 
-                position: "absolute",
-                bottom: 30,
-                right: 40 }} 
+            </Box>
+            <Typography
+              variant="h5"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                mr: 2,
+                display: { xs: 'flex', md: 'none' },
+                flexGrow: 1,
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
             >
-                <IconButton
-                  size="large"
-                  aria-label="hamburger menu"
-                  onClick={handleBottomDrawerToggle}
-                  color="inherit"
+              Mobile LOGO
+            </Typography>
+
+            {/* This part is for desktop menu */}
+            <Box
+              sx={{
+                justifyContent: 'flex-end',
+                flexGrow: 1,
+                display: { xs: 'none', md: 'flex' },
+              }}
+            >
+              {menuLinks.map((menuLink) => (
+                <Button
+                  key={menuLink.text}
+                  sx={{ mr: 3, my: 2, color: 'white', display: 'block' }}
+                  href={menuLink.link}
                 >
-                <MenuIcon />
-              </IconButton>
-            </Fab>
-    </AppBar>
+                  {menuLink.text}
+                </Button>
+              ))}
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+      <Toolbar />
 
-{/* This is for bottom drawer */}
+      {/* This part is for floating action button */}
+      <AppBar
+        sx={{
+          position: 'fixed',
+          display: { xs: 'flex', md: 'none' },
+          top: 'auto',
+          bottom: 0,
+        }}
+      >
+        <Fab
+          size="large"
+          sx={{
+            bgcolor: '#143F6B',
+            color: '#ffffff',
+            flexGrow: 1,
+            position: 'absolute',
+            bottom: 30,
+            right: 40,
+          }}
+        >
+          <IconButton
+            size="large"
+            aria-label="hamburger menu"
+            onClick={handleBottomDrawerToggle}
+            color="inherit"
+          >
+            <MenuIcon />
+          </IconButton>
+        </Fab>
+      </AppBar>
 
-      <Box component="nav" sx={{position: "relative"}}>
+      {/* This is for bottom drawer */}
+
+      <Box component="nav" sx={{ position: 'relative' }}>
         <Drawer
-          anchor='bottom'
+          anchor="bottom"
           container={container}
           variant="temporary"
           open={mobileBottomOpen}
@@ -194,34 +214,33 @@ function ResponsiveAppBarWithDrawer(props) {
           }}
           sx={{
             display: { xs: 'block', md: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', 
-            width: "100%",
-            height: "auto",
-            overflow: "visible" },
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
+              width: '100%',
+              height: 'auto',
+              overflow: 'visible',
+            },
           }}
         >
           <IconButton
-                  aria-label="close menu"
-                  onClick={handleBottomDrawerToggle}
-                  sx={{ 
-                  color: "#143F6B",
-                  bgcolor: "white",
-                  flexGrow: 1, 
-                  position: "absolute",
-                  top: -25,
-                  right: 40,
-                  padding: 0,
-                  fontSize: 52
-                   }} 
-                >
-                  <CancelIcon
-                    fontSize="inherit"
-                   />
+            aria-label="close menu"
+            onClick={handleBottomDrawerToggle}
+            sx={{
+              color: '#143F6B',
+              bgcolor: 'white',
+              flexGrow: 1,
+              position: 'absolute',
+              top: -25,
+              right: 40,
+              padding: 0,
+              fontSize: 52,
+            }}
+          >
+            <CancelIcon fontSize="inherit" />
           </IconButton>
           {drawerBottom}
         </Drawer>
       </Box>
-
     </>
   );
 }
