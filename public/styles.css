@@ -186,38 +186,6 @@ p {
   text-align: left;
 }
 
-.animate-card {
-  animation-name: animate-fade; 
-  animation-duration: 0.8s; 
-  animation-delay: 0.5s;
-  animation-fill-mode: backwards;
-}
-
-@keyframes animate-fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-card.pop {
-  animation-name: animate-pop; 
-  animation-timing-function:  cubic-bezier(.26,.53,.74,1.48);
-}
-
-@keyframes animate-pop {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 
 .left-button-box {
   position: absolute;
