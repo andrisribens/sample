@@ -11,7 +11,7 @@ function OneCard(props) {
   return (
     <Card
       raised
-      className={cardIsIvisble ? 'card animate-card' : 'card'}
+      className={cardIsIvisble ? 'card animate-card pop ' : 'card'}
       ref={cardRef}
       sx={{ maxWidth: 600, minWidth: 300 }}
     >

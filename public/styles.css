@@ -187,24 +187,37 @@ p {
 }
 
 .animate-card {
-  animation: show-card 2s ease-in-out;
+  animation-name: animate-fade; 
+  animation-duration: 0.8s; 
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
 }
 
-@keyframes show-card {
+@keyframes animate-fade {
   0% {
-    display: none;
     opacity: 0;
-    scale: 0.96;
   }
-
-  5% {
-    display: block;
-  }
-  
   100% {
     opacity: 1;
   }
 }
+
+.animate-card.pop {
+  animation-name: animate-pop; 
+  animation-timing-function:  cubic-bezier(.26,.53,.74,1.48);
+}
+
+@keyframes animate-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 
 .left-button-box {
   position: absolute;
