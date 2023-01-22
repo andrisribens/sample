@@ -109,10 +109,6 @@ p {
   display: block;
 }
 
-span.btn-first-cta-text {
-  text-decoration: none;
-}
-
 .btn-first-cta {
   padding: 10px 25px;
   text-transform: uppercase;
@@ -136,13 +132,11 @@ span.btn-first-cta-text {
 }
 
 .slider-block {
-  /* background-color: #fdfddb; */
   padding: 50px 0 100px;
   color:#EF5B0C;
 }
 
 .slider-container {
-  /* background-color: white; */
   margin: 0 auto;
   max-width: 100%;
   position: relative;
@@ -152,7 +146,6 @@ span.btn-first-cta-text {
   scroll-behavior: smooth;
   display: flex;
   overflow-x: auto;
-  /* background-color: #D4F6CC; */
 }
 
 .slider::-webkit-scrollbar {
@@ -165,7 +158,7 @@ span.btn-first-cta-text {
 }
 
 .card:hover {
-  /* transform: translateY(-5px); */
+  transform: translateY(-5px);
   box-shadow: 0 4px 1rem -4px #000;
 }
 
@@ -194,14 +187,20 @@ span.btn-first-cta-text {
 }
 
 .animate-card {
-  animation: show-card 1s;
+  animation: show-card 2s ease-in-out;
 }
 
 @keyframes show-card {
   0% {
+    display: none;
     opacity: 0;
     scale: 0.96;
   }
+
+  5% {
+    display: block;
+  }
+  
   100% {
     opacity: 1;
   }

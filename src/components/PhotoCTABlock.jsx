@@ -23,11 +23,9 @@ function PhotoCTABlock() {
               </span>
             </h4>
             <div>
-              <a href="#cta-block">
-                <button className="btn-first-cta">
-                  <span className="btn-first-cta-text">Contact me</span>
-                </button>
-              </a>
+              <button className="btn-first-cta">
+                <span className="btn-first-cta-text">Contact me</span>
+              </button>
             </div>
           </Grid>
         </Grid>
